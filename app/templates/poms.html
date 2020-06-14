@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>POMS</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.tense.label }}<br>
+            {{ form.tense }}<br>
+            {{ form.angry.label }}<br>
+            {{ form.angry }}<br>
+            {{ form.wornOut.label }}<br>
+            {{ form.wornOut }}<br>
+            {{ form.unhappy.label }}<br>
+            {{ form.unhappy }}<br>
+            {{ form.proud.label }}<br>
+            {{ form.proud }}<br>
+            {{ form.lively.label }}<br>
+            {{ form.lively }}<br>
+            {{ form.confused.label }}<br>
+            {{ form.confused }}<br>
+            {{ form.sad.label }}<br>
+            {{ form.sad }}<br>
+            {{ form.active.label }}<br>
+            {{ form.active }}<br>
+            {{ form.onEdge.label }}<br>
+            {{ form.onEdge }}<br>
+            {{ form.grouchy.label }}<br>
+            {{ form.grouchy }}<br>
+            {{ form.ashamed.label }}<br>
+            {{ form.ashamed }}<br>
+            {{ form.energetic.label }}<br>
+            {{ form.energetic }}<br>
+            {{ form.hopeless.label }}<br>
+            {{ form.hopeless }}<br>
+            {{ form.uneasy.label }}<br>
+            {{ form.uneasy }}<br>
+            {{ form.restless.label }}<br>
+            {{ form.restless }}<br>
+            {{ form.unableToConcentrate.label }}<br>
+            {{ form.unableToConcentrate }}<br>
+            {{ form.fatigued.label }}<br>
+            {{ form.fatigued }}<br>
+            {{ form.competent.label }}<br>
+            {{ form.competent }}<br>
+            {{ form.annoyed.label }}<br>
+            {{ form.annoyed }}<br>
+            {{ form.discouraged.label }}<br>
+            {{ form.discouraged }}<br>
+            {{ form.resentful.label }}<br>
+            {{ form.resentful }}<br>
+            {{ form.nervous.label }}<br>
+            {{ form.nervous }}<br>
+            {{ form.miserable.label }}<br>
+            {{ form.miserable }}<br>
+            {{ form.confident.label }}<br>
+            {{ form.confident }}<br>
+            {{ form.bitter.label }}<br>
+            {{ form.bitter }}<br>
+            {{ form.exhausted.label }}<br>
+            {{ form.exhausted }}<br>
+            {{ form.anxious.label }}<br>
+            {{ form.anxious }}<br>
+            {{ form.helpless.label }}<br>
+            {{ form.helpless }}<br>
+            {{ form.weary.label }}<br>
+            {{ form.weary }}<br>
+            {{ form.satisfied.label }}<br>
+            {{ form.satisfied }}<br>
+            {{ form.bewildered.label }}<br>
+            {{ form.bewildered }}<br>
+            {{ form.furious.label }}<br>
+            {{ form.furious }}<br>
+            {{ form.fullOfPep.label }}<br>
+            {{ form.fullOfPep }}<br>
+            {{ form.worthless.label }}<br>
+            {{ form.worthless }}<br>
+            {{ form.forgetful.label }}<br>
+            {{ form.forgetful }}<br>
+            {{ form.vigorous.label }}<br>
+            {{ form.vigorous }}<br>
+            {{ form.uncertainAboutThings.label }}<br>
+            {{ form.uncertainAboutThings }}<br>
+            {{ form.bushed.label }}<br>
+            {{ form.bushed }}<br>
+            {{ form.embarrassed.label }}<br>
+            {{ form.embarrassed }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    {% for pom in poms %}
+    <p>
+        {{ pom.athlete.username }} TMD: {{ pom.tmdSum }} on {{ pom.timestamp }}
+    </p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1> User: {{ user.username }}</h1>
+    <hr>
+    <!---
+    {% for pom in poms %}
+    <p>
+        {{ pom.athlete.username }} says: <b>{{ pom.tense }}</b>
+    </p>
+    {% endfor %}
+    -->
+    
+    {% for pom in poms %}
+    <p>
+        {{ pom.athlete.username }} TMD: {{ pom.tmdSum }} on {{ pom.timestamp }}
+    </p>
+    {% endfor %}
+{% endblock %}
